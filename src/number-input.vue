@@ -18,7 +18,7 @@
     />
     <input
       ref="input"
-      class="number-input__input"
+      :class="['number-input__input',inputclass]"
       type="number"
       :name="name"
       :value="currentValue"
@@ -105,6 +105,10 @@ export default {
     value: {
       type: Number,
       default: NaN,
+    },
+    inputclass: {
+      type: String,
+      default: undefined,
     },
   },
 
